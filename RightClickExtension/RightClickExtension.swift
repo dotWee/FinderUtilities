@@ -92,9 +92,10 @@ class FinderSync: FIFinderSync {
         }
 
         var originalPath = target
-        let originalFilename = "newfile"
-        var filename = "newfile.txt"
+        let originalFilename = "empty"
         let fileType = ".txt"
+        
+        var filename = "\(originalFilename)\(fileType)"
         var counter = 1
         
         while FileManager.default.fileExists(atPath: originalPath.appendingPathComponent(filename).path) {
